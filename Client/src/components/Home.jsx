@@ -19,7 +19,7 @@ const Home = () => {
   // Fetch books
   const fetchBooks = async () => {
     try {
-      const res = await fetch("http://localhost:5000/book");
+      const res = await fetch("https://server-41j9.onrender.com/book");
       if (!res.ok) throw new Error("Failed to fetch books");
       const data = await res.json();
       setBooks(data);
@@ -36,8 +36,8 @@ const Home = () => {
   const handleSubmit = async () => {
     try {
       const url = editingId
-        ? `http://localhost:5000/book/${editingId}`
-        : "http://localhost:5000/book/addbook";
+        ? `https://server-41j9.onrender.com/book/${editingId}`
+        : "https://server-41j9.onrender.com/book/addbook";
       const method = editingId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -75,7 +75,7 @@ const Home = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this book?")) {
       try {
-        const res = await fetch(`http://localhost:5000/book/${id}`, {
+        const res = await fetch(`https://server-41j9.onrender.com/book/${id}`, {
           method: "DELETE",
         });
         if (!res.ok) throw new Error("Failed to delete");
