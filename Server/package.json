@@ -15,6 +15,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.0.1",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "serverless-http": "^4.0.0"
   }
 }
